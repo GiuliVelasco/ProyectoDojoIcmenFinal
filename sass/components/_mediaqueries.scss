@@ -1,0 +1,203 @@
+//pantalla celular
+@media screen and (min-width: 320px) and (max-width: 576px) {
+    //mediaqueries del navegador
+    body{
+        nav{
+           ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+           }
+        }
+    }
+    
+    //mediaqueries de los h1
+    body{
+        .container-fluid{
+            .row{
+                h1{
+                    font-size: ($tamaño_letra)-10;
+                }
+            }
+        } 
+    }
+    //mediaqueries de la posición del logo
+    header{
+        .fondoheader{
+            .container-fluid{
+                display: flex;
+                align-self: end;
+            }
+        }
+    }
+    //mediaqueries de html quienes somos
+    .fondoMain{
+        .container-fluid{
+            section{
+                .qs-contenedor{
+                    margin: 0.5rem;
+                    width: 80%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .main-qs__img{
+                        width:30%;
+                        margin: 25px;
+                    }
+                    .main-qs_texto{
+                        .main-qs_nombre{
+                            font-size: ($tamaño_letra)-17;
+                        }
+                        .main-qs__parrafo{
+                            font-size: ($tamaño_letra)-19;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //mediaqueries de html cursos
+    main{
+        .container-fluid{
+            section{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .carousel{
+                    width: 95%;
+                    .carousel-inner{
+                        .carousel-item{
+                            div{
+                                p{
+                                    font-size: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+                form{
+                    width: 95%;
+                    margin: 10px;
+                }
+            }
+            div{
+                .section-div{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .cuadro{
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+    //mediaqueries de html novedades
+    main{
+        section{
+            .cuadro{
+                h3{
+                    font-size: ($tamaño_letra)-12;
+                }
+            }
+            .cuadro_dividido{
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    .subtitulo{
+                        width: 90%;
+                    }
+                    .col-9{
+                        width: 90%;
+                        text-align: justify;
+                    }
+                }
+            }
+        }
+    }
+    //mediaqueries de html tienda
+    .fondoMain{
+        .container-fluid{
+            section{
+                .card{
+                    @include tarjeta;
+                    width: 30rem;
+                    .card-body{
+                        .card-title{
+                            font-family: 'Roboto', sans-serif;
+                            font-size: 18px;
+                            text-transform: uppercase;
+                            color: $color-terciario;
+                            text-align: center;
+                        }
+                        .card-text{
+                            font-size: 16px;
+                        }
+                        p{
+                            span{
+                                font-weight: bold;
+                            }
+                        }
+                        a{
+                            background-color: $color-terciario;
+                            border: 1px solid $color-terciario;
+                            font-family: 'Roboto', sans-serif;
+                            color: black;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//pantalla tablet 576 a 768
+@media screen and (min-width: 577px) and (max-width: 768px){
+    //mediaqueries de los h1
+    body{
+        .container-fluid{
+            .row{
+                h1{
+                    font-size: ($tamaño_letra)-5;
+                }
+            }
+        } 
+    }    
+    //mediaqueries de html cursos
+    main{
+        .container-fluid{
+            section{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .carousel{
+                    width: 90%;
+                    .carousel-inner{
+                        .carousel-item{
+                            div{
+                                p{
+                                    font-size: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+                form{
+                    width: 88%;
+                    margin: 10px;
+                }
+            }
+            div{
+                .section-div{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .cuadro{
+                        width: 88%;
+                    }
+                }
+            }
+        }
+    }
+}

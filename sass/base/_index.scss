@@ -1,0 +1,20 @@
+@import "../components/variables";
+@import "../components/mapas";
+@import "../components/mixins";
+
+.container-fluid{
+    .row{
+        h1{
+            @include encabezados;
+        }
+    }
+    .row{
+        .parrafo{
+            font-size: map-get($parrafo-estandar, size-estandar);
+            color: map-get($parrafo-estandar, color-estandar);
+        }
+        .videoIndex{
+            margin-bottom: 2rem;
+        }
+    }
+}
